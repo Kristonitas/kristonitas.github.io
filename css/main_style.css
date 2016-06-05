@@ -9,6 +9,18 @@ body {
   background-color: #DEF;
 }
 
+a{
+  color: #333;
+}
+
+a:hover{
+  color: #666;
+}
+
+h2.center {
+  padding-top: 30px;
+}
+
 .center {
   text-align: center;
   padding-top: 10px;
