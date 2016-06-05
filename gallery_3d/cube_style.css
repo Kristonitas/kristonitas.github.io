@@ -1,0 +1,94 @@
+
+#cube {
+  width: 100vw;
+  height: 50vw;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  transition-timing-function: ease-in-out;
+}
+
+#cube .side{
+  width: 100vw;
+  height: 50vw;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+#cube .hanging{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#cube .hanging-left {
+  transform: rotateY(  90deg ) translateZ( -46.6vw );
+}
+#cube .hanging-front  {
+  transform: translateZ( -46.6vw );
+}
+#cube .hanging-right {
+  transform: rotateY(   -90deg ) translateZ( -46.6vw );
+}
+#cube .hanging-back   {
+  transform: rotateY( -180deg ) translateZ( -46.6vw );
+}
+
+#cube .wall-left {
+  transform: rotateY(  90deg ) translateZ( -49vw );
+}
+#cube .wall-front  {
+  transform: translateZ( -49vw );
+}
+#cube .wall-right {
+  transform: rotateY(   -90deg ) translateZ( -49vw );
+}
+#cube .wall-back   {
+  transform: rotateY( -180deg ) translateZ( -49vw );
+}
+
+#cube .top {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  transform: translateY( -50vw ) rotateX(   -90deg );
+}
+#cube .bottom {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  transform: translateY( -50vw ) rotateX(  90deg ) translateZ( -50vw );
+}
+
+figure{
+  margin: 0;
+}
+
+#cube .border{
+  background-color: black;
+  position: absolute;
+  height: 16.894vw;
+  width: 1vw;
+  left: -0.5vw;
+  backface-visibility: hidden;
+}
+
+#cube .border-left-left{
+  transform: translateX( 50vw ) translateY( 15.625vw ) rotateY( 90deg ) translateZ( -47.1vw ) translateX( -18.8vw ) rotateY(  90deg );
+}
+#cube .border-left-right{
+  transform: translateX( 50vw ) translateY( 15.625vw ) rotateY( 90deg ) translateZ( -47.1vw ) translateX( 18.8vw ) rotateY( -90deg );
+}
+
+#cube .border-front-left{
+  transform: translateX( 50vw ) translateY( 15.625vw ) translateZ( -47.1vw ) translateX( -18.8vw ) rotateY(  90deg );
+}
+#cube .border-front-right{
+  transform: translateX( 50vw ) translateY( 15.625vw ) translateZ( -47.1vw ) translateX( 18.8vw ) rotateY( -90deg );
+}
+
+#cube .border-right-left{
+  transform: translateX( 50vw ) translateY( 15.625vw ) rotateY( -90deg ) translateZ( -47.1vw ) translateX( -18.8vw ) rotateY(  90deg );
+}
+#cube .border-right-right{
+  transform: translateX( 50vw ) translateY( 15.625vw ) rotateY( -90deg ) translateZ( -47.1vw ) translateX( 18.8vw ) rotateY( -90deg );
+}

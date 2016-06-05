@@ -2,15 +2,17 @@ body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 18px;
   margin: 0;
+  padding-bottom: 100px;
   background-color: #DEF;
 }
 
 .center {
   text-align: center;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .container {
@@ -18,6 +20,10 @@ body {
   margin-right: auto;
   margin-left: auto;
   overflow: auto;
+}
+
+.container p {
+  margin: 9px;
 }
 
 .item {
@@ -35,7 +41,8 @@ body {
   background-color: #FFF;
 }
 
-.item h3 {
+.item h4 {
+  margin: 6px;
   text-align: center;
 }
 

@@ -1,0 +1,392 @@
+@font-face{
+    font-family: "Roboto-Regular";
+    src: url('Roboto-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Roboto-Light";
+    src: url('Roboto-Light.ttf');
+}
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 50vw;
+  margin: 0 auto;
+  perspective: 100vw;
+}
+
+@keyframes fade{
+  from {opacity: 0.8;}
+  to {opacity: 0;}
+}
+
+#intro-screen {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+
+  animation-duration: 2s;
+}
+
+.middle p {
+  font-size: 1.8vw;
+}
+
+#continue-button {
+  margin-top: 2vw;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#continue-button:hover {
+  opacity: 0.8;
+}
+
+.middle {
+  width: 50%;
+  margin: 16vw auto;
+}
+
+h1 {
+  margin: 1vw 0;
+  text-align: center;
+  font-weight: normal;
+  font-family: Roboto-Regular;
+  color: white;
+  font-size: 3vw;
+}
+
+p {
+  margin: 1vw 0;
+  text-align: center;
+  font-family: Roboto-Light;
+  color: white;
+  font-size: 2vw;
+}
+
+.title {
+
+}
+
+#turn-left{
+  position: absolute;
+  left: 17vw;
+}
+
+#turn-right{
+  position: absolute;
+  right: 17vw;
+}
+
+
+button:focus {
+  outline: 0;
+}
+
+.controls:hover{
+  width: 3.98vw;
+  height: 3.98vw;
+}
+
+.controls:hover .shadow{
+  top: 20%;
+  opacity: 0.6;
+}
+
+.controls{
+  cursor: pointer;
+  top: 25vw;
+
+  background: transparent;
+  width: 4vw;
+  height: 4vw;
+  border-width: 0;
+  animation-duration: 2s;
+}
+
+#turn-left-info {
+  left: 0;
+}
+
+#turn-right-info {
+  right: 0;
+}
+
+.controls p {
+  font-size: 1.5vw;
+  color: #2d2d2d;
+  position: absolute;
+  top: -80%;
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+
+.controls:hover p {
+  opacity: 1;
+}
+
+.controls .arrow{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.controls .shadow{
+  position: absolute;
+  top: 25%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+#overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  background: url(images/overlay.jpg) no-repeat center center fixed;
+  background-size: cover;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+@keyframes button-fade {
+  0%   {opacity: 1;}
+  20%  {opacity: 0.2;}
+  50%  {opacity: 0.1;}
+  80%  {opacity: 0.2;}
+  100% {opacity: 1;}
+}
+/*
+@keyframes button-move-down {
+  from {
+    top: 25vw;
+    opacity: 1;
+  }
+  to   {
+    top: 35vw;
+    opacity: 0.2;
+  }
+}
+
+@keyframes button-move-up {
+  from {
+    top: 35vw;
+    opacity: 0.2;
+  }
+  to   {
+    top: 25vw;
+    opacity: 1;
+  }
+}
+
+.controls.moved{
+  top: 35vw;
+  opacity: 0.2;
+}*/
+
+.picture {
+  cursor: pointer;
+  object-fit: cover;
+  position: absolute;
+  width: 11.5%;
+  height: 31.79%;
+  top: 32.25%;
+}
+
+.picture-first {
+  left: 19.25%;
+}
+
+.picture-second {
+  left: 44.25%;
+}
+
+.picture-third {
+  right: 19.25%;
+}
+
+#big-picture {
+  object-fit: cover;
+  position: absolute;
+  top: 9vw;
+  left: 18vw;
+  width: 25vw;
+  height: 34.375vw;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes picture0-to-big {
+  from {
+    top: 20.1vw;
+    left: 27.6vw;
+    width: 7.86vw;
+    height: 11.4vw;
+  }
+  to   {
+    top: 9vw;
+    left: 18vw;
+    width: 25vw;
+    height: 34.375vw;
+  }
+}
+
+@keyframes picture1-to-big {
+  from {
+    top: 20.1vw;
+    left: 46.1vw;
+    width: 7.86vw;
+    height: 11.4vw;
+  }
+  to   {
+    top: 9vw;
+    left: 18vw;
+    width: 25vw;
+    height: 34.375vw;
+  }
+}
+
+@keyframes picture2-to-big {
+  from {
+    top: 20.1vw;
+    left: 64.5vw;
+    width: 7.86vw;
+    height: 11.4vw;
+  }
+  to   {
+    top: 9vw;
+    left: 18vw;
+    width: 25vw;
+    height: 34.375vw;
+  }
+}
+
+#info {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation-duration: 2s;
+}
+
+@keyframes info-appear {
+  from {
+    opacity: 0;
+  }
+  to   {
+    opacity: 1;
+  }
+}
+
+@keyframes info-fade {
+  from {
+    opacity: 1;
+  }
+  to   {
+    opacity: 0;
+  }
+}
+
+#info.appeared{
+  visibility: visible;
+  opacity: 1;
+}
+
+.side video{
+  position: absolute;
+  top: 19.53%;
+  left: 25.39%;
+  width: 49.22%;
+  height: 54.69%;
+}
+
+#musicToggle {
+  cursor: pointer;
+  border-width: 0;
+  position: absolute;
+  height: 3vw;
+  width: 3vw;
+  right: 3vw;
+  top: 3vw;
+  background: url(images/play.png);
+  background-size: cover;
+  opacity: 0.5;
+}
+
+#musicToggle.mute {
+  background: url(images/mute.png);
+  background-size: cover;
+}
+
+#musicToggle:hover {
+  opacity: 0.8;
+}
+
+#musicToggle:active {
+  height: 2.8vw;
+  width: 2.8vw;
+  right: 3.1vw;
+  top: 3.1vw;
+}
+
+#picture-text {
+  font-size: 18pt;
+  text-align: justify;
+  position: absolute;
+  top: 16vw;
+  left: 43vw;
+  width: 44vw;
+  height: 27.5vw;
+}
+
+#picture-text p {
+  margin: 1vw;
+  margin-left:  4vw;
+  font-weight: normal;
+  font-family: Roboto-Light;
+  text-align: left;
+  color: white;
+  font-size: 1.5vw;
+}
+
+#picture-seperator {
+  height: 0.15vw;
+  margin: 0vw 2vw;
+  width: 8vw;
+  background: white;
+}
+
+#picture-text h2 {
+  margin: 1vw 4vw;
+  font-weight: normal;
+  font-family: Roboto-Regular;
+  text-align: left;
+  color: white;
+  font-size: 2vw;
+}
+
+#closeInfoButton {
+  cursor: pointer;
+  border-width: 0;
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  top: 8vw;
+  right: 16vw;
+  background: url(images/closeButton.png);
+  background-size: cover;
+}

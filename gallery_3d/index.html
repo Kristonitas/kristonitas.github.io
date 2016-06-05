@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
+  <title>Galerija 3D</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="cube_style.css">
+</head>
+<body>
+  <section class="container">
+    <div id="cube" style="transform: translateZ( 10vw ) rotateY( 0deg ) translateY( 2vw );">
+
+      <img class="side wall-left" src="images/baked_wall.jpg">
+      <div class="side hanging-left">
+        <img class="hanging" src="images/hanging.png">
+        <img class="picture picture-first" src="images/escher/kaire_1.jpg">
+        <img class="picture picture-second" src="images/escher/kaire_2.jpg">
+        <img class="picture picture-third" src="images/escher/kaire_3.jpg">
+      </div>
+      <figure class="border border-left-left"></figure>
+      <figure class="border border-left-right"></figure>
+
+      <img class="side wall-front" src="images/baked_wall.jpg">
+      <div class="side hanging-front">
+        <img class="hanging" src="images/hanging.png">
+        <img class="picture picture-first" src="images/escher/pagrindinis_1.jpg">
+        <img class="picture picture-second" src="images/escher/pagrindinis_2.jpg">
+        <img class="picture picture-third" src="images/escher/pagrindinis_3.jpg">
+      </div>
+      <figure class="border border-front-left"></figure>
+      <figure class="border border-front-right"></figure>
+
+      <img class="side wall-right" src="images/baked_wall.jpg">
+      <div class="side hanging-right">
+        <img class="hanging" src="images/hanging.png">
+        <img class="picture picture-first" src="images/escher/desine_1.jpg">
+        <img class="picture picture-second" src="images/escher/desine_2.jpg">
+        <img class="picture picture-third" src="images/escher/desine_3.jpg">
+      </div>
+      <figure class="border border-right-left"></figure>
+      <figure class="border border-right-right"></figure>
+
+      <img class="side wall-back" src="images/baked_wall_with_tv.jpg">
+      <div class="side hanging-back">
+        <img class="hanging" src="images/tv.png">
+        <video width="1280px" height="720px" autobuffer loop controls>
+          <source src='video.mp4' type='video/mp4;'>
+        </video>
+      </div>
+
+      <img class="top" src="images/baked_ceiling.jpg">
+      <img class="bottom" src="images/baked_floor.jpg">
+
+    </div>
+  </section>
+
+  <button class="controls" id="turn-left">
+    <p id="turn-left-info">Biography</p>
+    <img class="arrow" src="images/left_arrow.png">
+    <img class="shadow" src="images/left_arrow_shadow.png">
+  </button>
+  <button class="controls" id="turn-right">
+    <p id="turn-right-info">Artworks</p>
+    <img class="arrow" src="images/right_arrow.png">
+    <img class="shadow" src="images/right_arrow_shadow.png">
+  </button>
+
+  <section id="info">
+    <button id="closeInfoButton"></button>
+    <img id="big-picture" src="images/picture_hd.png">
+    <div id="picture-text">
+      <h2 id="picture-title">
+        HAND WITH REFLECTING SPHERE
+      </h2>
+      <p id="picture-details">
+        1935 Lithograph. 213mm x 318 mm
+      </p>
+      <figure id="picture-seperator"></figure>
+      <p id="picture-description">
+      It's a lithograph print, first printed in January 1935,
+      The piece depicts a hand holding a reflective sphere.
+      In the reflection, most of the room around Escher
+      can be seen, and the hand holding the sphere is
+      revealed to be Escher's.
+      </p>
+    </div>
+  </section>
+
+  <section id="intro-screen">
+    <div class="middle">
+      <h1>WELCOME TO<br/>A VIRTUAL GALLERY</h1>
+      <p>An exhibition of the famous Dutch artist<br/>M. C. Escher is being presented<br/>at the moment</p>
+      <p id="continue-button">Let's take a tour >></p>
+    </div>
+  </section>
+
+   <audio id="music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicToggle"></button>
+
+  <img id="overlay">
+  <script src="picture_information.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
