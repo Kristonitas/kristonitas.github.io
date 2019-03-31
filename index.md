@@ -1,22 +1,31 @@
-<!doctype html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-<head>
-  <title>Portfolio: K.S.</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" type="text/css" href="css/main_style.css">
+{% assign a = "AAA" %}
+{% include example.html content="This is my sample note." %}
 
-  <script src="js/jquery-1.6.1.min.js" type="text/javascript" charset="utf-8"></script>
-  <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
-  <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+## Collections
 
+{% raw %}
+{{ site.collections | inspect | strip_newlines }}
+{% endraw %}
 
-  <meta property="og:title" content="Portfolio: K. S." />
-  <meta property="og:description" content="My favorite examples of work and hobby projects" />
-  <meta property="og:url" content="http://kristonitas.github.io/" />
-  <meta property="og:image" content="http://kristonitas.github.io/images/baltasis_tiltas.jpg" />
-</head>
+## Projects
 
-<body>
+<code>
+{{ site.projects | inspect }}
+</code>
+
+## Skills
+
+<code>
+{{ site.skills | inspect }}
+</code>
+
+<ul>
+  {% for project in site.projects %}
+    <li>
+      <a href="{{ project.url }}">{{ project.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
 <h1 class="center">
   Kristupas Stumbrys
@@ -309,19 +318,3 @@
     </a>
   </div>
 </div>
-
-
-
-<script type="text/javascript" charset="utf-8">
-  $(document).ready(function(){
-    $("a[rel^='prettyPhoto']").prettyPhoto({
-      social_tools: '',
-      allow_resize: true,
-      default_width: 1280,
-      default_height: 720,
-      deeplinking: false
-    });
-  });
-</script>
-
-</body>

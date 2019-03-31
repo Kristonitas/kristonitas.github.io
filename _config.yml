@@ -1,0 +1,28 @@
+defaults:
+- scope:
+    path: ""
+  values:
+    layout: "root"
+- scope:
+    path: _projects
+    type: projects
+  values:
+    layout: project
+- scope:
+    path: _skills
+    type: skills
+  values:
+    layout: skill
+
+collections:
+  posts:
+    output: false
+  projects:
+    permalink: "/projects/:year/:title"
+    output: true
+  skills:
+    permalink: "/skills/:title"
+    output: true
+
+exclude:
+- README.md
