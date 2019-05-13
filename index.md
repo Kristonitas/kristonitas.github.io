@@ -1,3 +1,8 @@
+{% include home.html %}
+
+{% comment %}
+---------------------------------
+
 {% assign a = "AAA" %}
 {% include example.html content="This is my sample note." %}
 
@@ -18,14 +23,6 @@
 <code>
 {{ site.skills | inspect }}
 </code>
-
-<ul>
-  {% for project in site.projects %}
-    <li>
-      <a href="{{ project.url }}">{{ project.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
 
 <h1 class="center">
   Kristupas Stumbrys
@@ -318,3 +315,4 @@
     </a>
   </div>
 </div>
+{% endcomment %}

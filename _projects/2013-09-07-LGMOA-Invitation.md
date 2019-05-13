@@ -1,6 +1,6 @@
 ---
 cover: images/covers/lgmoa_invitation.jpg
-skills: [blender, after_effects, animation]
+skills: [blender, after-effects, animation]
 date_accuracy: day
 ---
 

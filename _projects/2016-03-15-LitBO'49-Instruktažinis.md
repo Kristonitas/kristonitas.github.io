@@ -1,6 +1,6 @@
 ---
 cover: images/covers/litbo_49_inst.jpg
-skills: [after_effects, gimp, animation, editing, teamwork]
+skills: [after-effects, gimp, animation, editing, teamwork]
 date_accuracy: day
 ---
 

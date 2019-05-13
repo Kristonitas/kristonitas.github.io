@@ -1,6 +1,6 @@
 ---
 cover: images/covers/litcho_52_inst.jpg
-skills: [after_effects, gimp, blender, animation, editing, teamwork]
+skills: [after-effects, gimp, blender, animation, editing, teamwork]
 date_accuracy: day
 ---
 

@@ -1,0 +1,15 @@
+<ul>
+  {% for skill in site.skills %}
+  <li>
+    <a href="{{ skill.url }}">{{ skill.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for project in site.projects %}
+  <li>
+    <a href="{{ project.url }}">{{ project.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

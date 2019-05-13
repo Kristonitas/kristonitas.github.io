@@ -1,28 +1,36 @@
 defaults:
+# This sets the default layout to be root. All other layouts should be inhereting root layout to have a consistent feel.
 - scope:
     path: ""
   values:
     layout: "root"
+# This sets default layout for projects to be project.html
 - scope:
-    path: _projects
+    path: _projects # This is folder path
     type: projects
   values:
     layout: project
+# This sets default layout for skills to be skill.html
 - scope:
-    path: _skills
+    path: _skills # This is folder path
     type: skills
   values:
     layout: skill
 
+# Accessible by {{ site.<name-of-collection> }}
 collections:
+# Disables the output for _posts folder
   posts:
     output: false
+# Enables output and enumeration for _projects folder
   projects:
     permalink: "/projects/:year/:title"
     output: true
+# Enables output and enumeration for _skills folder
   skills:
     permalink: "/skills/:title"
     output: true
 
+# Don't render these files
 exclude:
 - README.md
