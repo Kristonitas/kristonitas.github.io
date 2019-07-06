@@ -1,5 +1,18 @@
 <div class="card">
-  {%- comment -%} <img src="{{ project.cover }}" /> {%- endcomment -%}
+  <div class="fill">
+    <img src="{{ include.projectObject.cover }}" />
+  </div>
 
-  <a href="{{ project.url }}">{{ project.title }}</a>
+
+  <div class="fill">
+    <a class="fill" href="{{ include.projectObject.url }}" > </a>
+    <div class="info">
+      <h3>{{ include.projectObject.title }}</h3>
+      <ul>
+        {% for skill in include.projectObject.skills %}
+          {% include skillTag.html skillObject=skill %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>

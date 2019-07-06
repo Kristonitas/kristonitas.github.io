@@ -1,7 +1,7 @@
 <ul hidden>
   {% for skill in site.skills %}
   <li>
-    <a href="{{ skill.url }}">{{ skill.title }}</a>
+    <a href="{{ skill.url }}" >{{ skill.title }}</a>
   </li>
   {% endfor %}
 </ul>
@@ -9,6 +9,6 @@
 <div class="projects">
   {% assign projects = site.projects | reverse %}
   {% for project in projects %}
-    {% include projectCard.html project=project %}
+    {% include projectCard.html projectObject=project %}
   {% endfor %}
 </div>

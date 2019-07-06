@@ -1,0 +1,9 @@
+{% assign skillPage = site.skills | where: "skill", include.skillObject | first %}
+
+{% if skillPage %}
+
+<li>
+    <a href="{{ skillPage.url }}" >{{ skillPage.title }}</a>
+</li>
+
+{% endif %}
