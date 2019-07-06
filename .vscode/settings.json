@@ -1,5 +1,17 @@
 {
-    "files.exclude": {
-        "_site/": true
-    }
+  "files.exclude": {
+    "_site/": true
+  },
+  "files.associations": {
+    "*.html": "jekyll"
+  },
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  }
 }
