@@ -1,4 +1,13 @@
 .projects {
+  a {
+    color: rgb(255, 204, 128);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(255, 246, 205);
+  }
+
   .card:hover {
     img {
       transform: scale(1.1);
