@@ -2,6 +2,7 @@
 cover: images/covers/olimpiados_lt.jpg
 skills: [html, rails, teamwork]
 date_accuracy: month
+date_label: 2017-present
 ---
 
 [Olimpiados.lt](https://olimpiados.lt)

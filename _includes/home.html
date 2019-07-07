@@ -1,14 +1,34 @@
-<ul hidden>
-  {% for skill in site.skills %}
-  <li>
-    <a href="{{ skill.url }}" >{{ skill.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
+<div class="skills">
+  <div class="menu collapsed">
+    <ul>
+      {% for skill in site.skills %}
+        <li>
+          <input class="checkbox" type="checkbox" name="{{ skill.skill }}" value="{{ skill.title }}">
+          <a href="{{ skill.url }}" >{{ skill.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <button class="toggle">
+    </button>
+  </div>
+</div>
 
 <div class="projects">
-  {% assign projects = site.projects | reverse %}
+  {% include projectCard.html projectObject=site.data.fatmap %}
+
+  {% assign projects=site.projects | reverse %}
   {% for project in projects %}
     {% include projectCard.html projectObject=project %}
   {% endfor %}
 </div>
+
+<script>
+
+const toggle = document.querySelector(".skills .menu .toggle");
+const menu = document.querySelector(".skills .menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("collapsed");
+});
+
+</script>

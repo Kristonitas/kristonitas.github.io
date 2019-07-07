@@ -1,10 +1,18 @@
-<div class="card">
+{% assign skills = include.projectObject.skills | join: "," %}
+
+<div class="card" skills="{{ skills }}">
   <div class="fill">
     <img src="{{ include.projectObject.cover }}" />
   </div>
 
   <div class="fill">
-    <div class="date">{{ include.projectObject.date | date: "%Y" }}</div>
+    <div class="date">
+      {% if include.projectObject.date_label %}
+        {{ include.projectObject.date_label }}
+      {% else %}
+        {{ include.projectObject.date | date: "%Y" }}
+      {% endif %}
+    </div>
 
     <a class="fill" href="{{ include.projectObject.url }}"> </a>
 

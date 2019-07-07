@@ -1,3 +1,79 @@
+.skills {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 40px;
+  pointer-events: none;
+
+  .menu {
+    position: relative;
+    pointer-events: auto;
+    background-color: rgb(214, 142, 65);
+    transition: all 0.2s ease;
+
+    .toggle {
+      position: absolute;
+      display: block;
+      left: calc(50% - 20px);
+      height: 40px;
+      width: 40px;
+      bottom: -40px;
+      background-color: rgb(214, 142, 65);
+      border: none;
+      color: white;
+      outline: none;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .toggle:after {
+      display: inline-block;
+      content: "V";
+      transform: rotate(180deg);
+      transition: all 0.2s ease;
+    }
+
+    .toggle:hover:after {
+      transform: rotate(180deg) scale(2);
+    }
+  }
+
+  .menu.collapsed {
+    transform: translateY(-100%);
+
+    .toggle:after {
+      transform: rotate(0deg);
+    }
+
+    .toggle:hover:after {
+      transform: rotate(0deg) scale(2);
+    }
+  }
+
+  ul {
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    line-height: 1.5em;
+    display: inline-block;
+    color: white;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
 .projects {
   a {
     color: rgb(255, 204, 128);

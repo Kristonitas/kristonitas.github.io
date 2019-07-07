@@ -1,0 +1,36 @@
+.checkbox {
+  position: relative;
+  -webkit-appearance: initial;
+  outline: none;
+
+  margin: 0;
+  border: 2px solid white;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+}
+
+.checkbox:after {
+  top: -1px;
+  left: -1px;
+  position: absolute;
+  display: block;
+  background-color: rgba(0, 0, 0, 0);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  content: "";
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox:hover:after {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.checkbox:checked:after {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.checkbox:checked:hover:after {
+  background-color: rgba(200, 200, 200, 0.7);
+}
