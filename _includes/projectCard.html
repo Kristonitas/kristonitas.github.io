@@ -3,16 +3,21 @@
     <img src="{{ include.projectObject.cover }}" />
   </div>
 
-
   <div class="fill">
-    <a class="fill" href="{{ include.projectObject.url }}" > </a>
+    <div class="date">{{ include.projectObject.date | date: "%Y" }}</div>
+
+    <a class="fill" href="{{ include.projectObject.url }}"> </a>
+
     <div class="info">
-      <h3>{{ include.projectObject.title }}</h3>
-      <ul>
+      <div class="title">
+        <a href="{{ include.projectObject.url }}">{{ include.projectObject.title }}</a>
+      </div>
+
+      <div class="skill-tags">
         {% for skill in include.projectObject.skills %}
           {% include skillTag.html skillObject=skill %}
         {% endfor %}
-      </ul>
+      </div>
     </div>
   </div>
 </div>

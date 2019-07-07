@@ -2,14 +2,21 @@
   .card:hover {
     img {
       transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    .info {
+      background-color: rgba(0, 0, 0, 0.6);
     }
   }
 
   .card {
+    background-color: #000;
     overflow: hidden;
     display: block;
     position: relative;
     width: 100%;
+    // 16:9 aspect ratio
     padding-bottom: 56.25%;
 
     .fill {
@@ -26,20 +33,49 @@
       width: 100%;
       height: 100%;
       transform: scale(1);
+      opacity: 0.8;
 
-      transition: transform 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .date {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      color: white;
+      text-shadow: 0 0 8px black;
     }
 
     .info {
-      a {
-        color: inherit;
-      }
-      color: white;
+      padding-left: 1em;
+      padding-right: 1em;
       background-color: rgba(0, 0, 0, 0.4);
+      transition: all 0.2s ease-in-out;
       position: absolute;
       height: 100px;
       bottom: 0;
-      width: 100%;
+      left: 0;
+      right: 0;
+
+      .title {
+        font-size: 1.2em;
+        margin: 0.2em 0;
+      }
+
+      .skill-tags {
+        .skill-tag {
+          margin: 2px 2px 2px 0px;
+          padding: 0.2em;
+          display: inline-block;
+          background-color: rgba(255, 177, 59, 0.5);
+          color: white;
+          transition: all 0.2s ease-in-out;
+        }
+
+        .skill-tag:hover {
+          background-color: rgba(197, 130, 29, 1);
+        }
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 body {
-  background-color: #f8f8ff;
+  background-color: #ccc;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 16px;
@@ -8,12 +8,12 @@ body {
 }
 
 a {
-  color: #a33;
+  color: rgb(255, 204, 128);
   text-decoration: none;
 }
 
 a:hover {
-  color: #f66;
+  color: rgb(255, 246, 205);
 }
 h2.center {
   padding-top: 30px;
