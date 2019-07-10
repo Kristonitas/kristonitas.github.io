@@ -38,6 +38,20 @@
     .toggle:hover:after {
       transform: rotate(180deg) scale(2);
     }
+
+    .toggle.no-js {
+      left: calc(50% - 70px);
+      width: 140px;
+    }
+
+    .toggle.no-js:after {
+      content: "Enable javascript for skill filtering";
+    }
+
+    .toggle.no-js:hover:after {
+      transform: none !important;
+      color: #eee;
+    }
   }
 
   .menu.collapsed {
@@ -60,6 +74,11 @@
 
   li {
     list-style: none;
+    display: flex;
+
+    a {
+      flex: 1;
+    }
   }
 
   a {

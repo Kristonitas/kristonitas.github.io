@@ -1,15 +1,25 @@
 <div class="skills">
   <div class="menu collapsed">
-    <ul>
+    <ul id="skill-list">
       {% for skill in site.skills %}
-        <li>
+        <li skill="{{ skill.skill }}">
           <input class="checkbox" type="checkbox" name="{{ skill.skill }}" value="{{ skill.title }}">
           <a href="{{ skill.url }}" >{{ skill.title }}</a>
         </li>
       {% endfor %}
     </ul>
-    <button class="toggle">
-    </button>
+
+    <noscript>
+      <button class="toggle no-js">
+      </button>
+    </noscript>
+    <script>
+
+      document.write(`
+        <button class="toggle">
+        </button>
+      `)
+    </script>
   </div>
 </div>
 
