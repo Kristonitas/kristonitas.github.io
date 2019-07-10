@@ -1,7 +1,8 @@
 <div class="skills">
   <div class="menu collapsed">
     <ul id="skill-list">
-      {% for skill in site.skills %}
+      {% assign skills=site.skills | sort: "index" | reverse %}
+      {% for skill in skills %}
         <li skill="{{ skill.skill }}">
           <input class="checkbox" type="checkbox" name="{{ skill.skill }}" value="{{ skill.title }}">
           <a href="{{ skill.url }}" >{{ skill.title }}</a>
@@ -32,13 +33,5 @@
   {% endfor %}
 </div>
 
-<script>
+<script src="/js/home.js"></script>
 
-const toggle = document.querySelector(".skills .menu .toggle");
-const menu = document.querySelector(".skills .menu");
-
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("collapsed");
-});
-
-</script>
